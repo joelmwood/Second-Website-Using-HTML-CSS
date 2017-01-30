@@ -1,0 +1,158 @@
+@charset  "utf-8";
+
+body {
+    font-family: "Times New Roman",Times,serif;
+    background-image: url("../Images/Background.jpg");
+    vertical-align: middle;
+}
+
+header {
+    border: thin solid #000;
+    height: 20%;
+    background-color: #445e2c;
+    padding: 5px;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+main {
+    /* background-color: #FFF; */
+    padding: 10px;
+    height: 60%;
+    border: 1px solid #000;
+    font-size: 2em;
+}
+
+main h1 {
+    font-size: 1.5em;
+}
+
+footer {
+    padding-left: 5px;
+    border: thin solid;
+    position: relative;
+}
+
+footer nav {
+    border: none;
+}
+
+footer nav ul {
+    list-style: none;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    padding: 0;
+}
+
+footer nav ul a {
+    text-decoration: none;
+    color: #00F;
+}
+
+footer nav ul a:visited {
+    //color: #003;
+}
+
+footer nav ul a:hover {
+    color: #445e2c;
+    text-decoration: underline;
+}
+
+.FaceBookLink {
+    float: right;
+    height: 50px;
+    width: 50px;
+}
+
+.MainNav {
+    border: thin solid #000;
+    padding: 5px;
+}
+
+.MainNav a {
+    text-decoration: none;
+    /* color: #000; */
+    font-size: 2em;
+    border-right-width: thin;
+    border-right-style: solid;
+    border-right-color: #000;
+    padding: 5px;
+}
+
+.MainNav a:hover {
+    background-color: #445e2c;
+}
+
+.Logo {
+    float: left;
+    width: 15%;
+}
+
+.MenuContent {
+    overflow: auto;
+    /* background-color: #2e2e2e; */
+}
+
+.MenuTabs {
+    float: left;
+    /* background-color: #FFF; */
+    overflow: hidden;
+}
+
+.MenuTabs ul,.MenuTabs li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.MenuTabs > ul > li {
+    margin: 0 2px 0 0;
+    padding: 7px 10px;
+    display: block;
+    color: #FFF;
+    border-top-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: #CCC;
+}
+
+.MenuTabs > ul > li:hover {
+    background: #fff;
+    cursor: pointer;
+}
+
+.MenuTabs > ul > li > .active {
+    /* background: #fff; */
+    cursor: pointer;
+}
+
+.MenuTabs ul a {
+    text-decoration: none;
+    color: #000;
+}
+
+.Menus {
+    /* background-color: #FFF; */
+    float: right;
+    width: 88.95%;
+    margin: 0;
+}
+
+.Menus h1 {
+    text-align: center;
+}
+
+.Menus h2 {
+    text-align: center;
+}
+
+.CorrectionText {
+    font-size: .5em;
+    color: red;
+}
+
+#lblInputName, #lblInputPass, .formInput {
+    font-size: 20px;
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Miner's Roadhouse 140-Menu</title>
+    <meta charset="utf-8">
+    <link href="Styles/SiteCSS.css" rel="stylesheet" type="text/css">
+    <script src="Scripts/SiteScripting.js" type="text/javascript">
+    </script>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js">
+    </script>
+</head>
+<body>
+    <header>
+        <a href=
+        "https://www.facebook.com/MinersRoadhouse140/?fref=ts"><img class=
+        "FaceBookLink" src="Images/Facebook_icon.svg.png"  alt="Facebook Logo"></a> <img class=
+        "Logo" src="Images/Logo.png" alt="Logo">
+        <h1>Miner's Roadhouse 140</h1>
+    </header>
+    <nav class="MainNav" id="MainNav">
+        <a href="Index.html">Home</a><a href="Menu.html">Our Menu</a><a href=
+        "Reservation.html">Make a Reservation</a><a href="Account.html" id=
+        "account">Account</a>
+    </nav>
+    <main>
+        <div class="MenuContent">
+            <div class="MenuTabs" id="Tabs">
+                <ul>
+                    <li>
+                        <a href="#Breakfast">Breakfast</a>
+                    </li>
+                    <li>
+                        <a href="#Lunch">Lunch</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="Menus" id="Menus">
+                <section id="BreakFast">
+                    <h1>Roadhouse Breakfast</h1>
+                    <h2>served until 4pm</h2>
+                    <p><b>Farmer's Choice</b> $9.00<br>
+                    Three slices of thick bacon or two house-made sausage
+                    patties or three Roadhouse sasuage links with two eggs,
+                    hash browns and toast.</p>
+                    <p><b>Ham and Eggs</b> $10.00<br>
+                    An old-fashion center cut ham steak with two eggs, hash
+                    browns, and toast.</p>
+                    <p><b>Country Breakfast</b> $9.00<br>
+                    Two eggs,two RoadHouse sausage links or two strips of thick
+                    bacon, hash browns, biscuit and gravy.</p>
+                    <p><b>The 49er</b> $9.00<br>
+                    Two eggs,two Roadhouse sausage link, twostrips of lean
+                    bacon, andtwo buttermilk pancakes.<br>
+                    <b>* Substitute sausage links for house-made sausage
+                    patty</b></p>
+                </section>
+                <section id="Lunch">
+                    <h1>Hot Sandwiches</h1>
+                    <p><b>Patty Melt</b> $12.00<br>
+                    Grilled onions and Swiss cheese on toasted marble rye with
+                    Dijonnaise.</p>
+                    <p><b>Chicken Breast Deluxe</b> $11.00<br>
+                    Chicken breast,avocado, bacon, Swiss cheese, dijonnaise on
+                    Parmesan crusted sourdough.</p>
+                    <p><b>Roast Beef Ciabatta</b> $11.00<br>
+                    Fresh roast beef with grilled onion, bell pepper, pepper
+                    jack cheese and cajun sauce on the side.</p>
+                    <p><b>The Rueben</b> $10.00<br>
+                    Sheson's corned beef, Swiss cheese, sauerkraut and thousand
+                    island served on marble rye.</p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <ul>
+                <li>
+                    <a href="Index.html">Home</a>
+                </li>
+                <li>
+                    <a href="Menu.html">Our Menu</a>
+                </li>
+                <li>
+                    <a href="Reservation.html">Make a Reservation</a>
+                </li>
+                <li>
+                    <a href="Account.html" id="account2">Account</a>
+                </li>
+            </ul>
+        </nav>
+        <p>5159 State Highway 140<br>
+        Mariposa, CA<br>
+        <small>Copyright &copy; 2016</small></p>
+    </footer>
+    <script>
+    var tabLinks;
+    var tabPanels;
+
+    window.onload=function() {
+     checkCookie();
+    // when the page loads, grab the li elements
+    tabLinks = document.getElementById("Tabs").getElementsByTagName("li");
+    // Now get all the tab panel container divs
+    tabPanels = document.getElementById("Menus").getElementsByTagName("section");
+
+    // activate the _first_ one
+    MenuDisplay(tabLinks[0]);
+
+    // attach event listener to links using onclick and onfocus, fire the displayPanel function, return false to disable the link
+    for (var i = 0; i < tabLinks.length; i++) {
+        tabLinks[i].onclick = function() { 
+            MenuDisplay(this); 
+            return false;
+        }
+        tabLinks[i].onfocus = function() { 
+            MenuDisplay(this); 
+            return false;
+        }
+    }
+    }
+    </script>
+</body>
+</html>
